@@ -6,8 +6,8 @@ import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
 
 # Create Dash app
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-server=app.server
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LITERA])
+server = app.server
 
 # Mapbox access token (replace with your own)
 mapbox_access_token = "pk.eyJ1IjoiYWJyaWxoaWQiLCJhIjoiY2xoY3J5dnlpMHU0ajNtbXR1MW80cHd0aiJ9.4D2V1tHsx7FS8HFveyaz1Q"
