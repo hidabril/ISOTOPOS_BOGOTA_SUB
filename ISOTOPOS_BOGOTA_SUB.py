@@ -5,6 +5,10 @@ import pandas as pd
 import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
 
+# Create Dash app
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+server=app.server
+
 # Mapbox access token (replace with your own)
 mapbox_access_token = "pk.eyJ1IjoiYWJyaWxoaWQiLCJhIjoiY2xoY3J5dnlpMHU0ajNtbXR1MW80cHd0aiJ9.4D2V1tHsx7FS8HFveyaz1Q"
 mapbox_style = "mapbox://styles/mapbox/outdoors-v12"
@@ -31,11 +35,6 @@ colors = {
 
 lineaY = [-28, -32.01, -36.02, -40.03, -44.04, -48.05, -52.06, -56.07, -60.08, -64.09, -68.1, -72.11, -76.12, -80.13, -84.14, -88.15, -92.16, -96.17, -100.18, -104.19, -108.2, -148.3]
 lineaX = [-5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11.5, -12, -12.5, -13, -13.5, -14, -14.5, -15, -20]
-
-
-# Create Dash app
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-server=app.server
 
 # Function to create filtered scatter plot figure based on selected points
 def get_figure(selected_points):
