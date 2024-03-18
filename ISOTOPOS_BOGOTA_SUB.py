@@ -34,7 +34,7 @@ lineaX = [-5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11
 
 
 # Create Dash app
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LITERA])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 server=app.server
 
 # Function to create filtered scatter plot figure based on selected points
